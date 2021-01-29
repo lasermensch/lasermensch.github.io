@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+
+<html lang="sv-se">
+<head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Hanssons Hårsalong - Tjänster</title>
+        <link rel="stylesheet" href="styles/bootstrap.css" />
+        <link rel="stylesheet" href="styles/customstyle.css" />
+        <script src="scripts/bootstrapjquery.js"></script>
+        <script src="scripts/bootstrap.bundle.js"></script>
+        <script src="scripts/customscripts.js"></script>
+</head>
+<body>
+    <div class="wrapper">
+            
+        <header class="sticky-top">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <a class="navbar-brand" href="Index.html">Hanssons hårsalong</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+              
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                  <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                      <a class="nav-link" href="Index.html">Hem</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link active" href="Services.html">Tjänster</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="Prices.html">Priser</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="Contact.html">Kontakt</a>
+                    </li>
+                  </ul>
+                  
+                    <button class="btn btn-outline-success my-2 my-sm-0" data-toggle="modal" data-target="#booking" >Boka tid!</button>
+                </div>
+              </nav>
+        </header>
+
+        <main>
+            <section class="row">
+                <figure class="col-md-6 col-lg" data-toggle="modal" data-target="#booking" onclick="modalValue('klippning - långt hår')">
+                  <picture> <!--Det är absolut korrekt att använda picture inom figure. https://stackoverflow.com/questions/12899691/use-of-picture-inside-figure-element-in-html5-->
+                    <source srcset="images/hairdresser-4682912_1280x960.jpg" media="(min-width:900px)"/>
+                    <source srcset="images/hairdresser-4682912_800x600.jpg" media="(min-width:700px)" />
+                    <source srcset="images/hairdresser-4682912_640x480.jpg" media="(min-width:550px)" />
+                    <img src="images/hairdresser-4682912_480x360.jpg" class="figure-img img-fluid" alt="klippning av långt hår" />
+                  </picture>
+                    <figcaption class="figure-caption">
+                        <h2>Långt hår</h2>
+                        <p>Vi klipper långt hår till dyrare pris</p>
+                    </figcaption>
+                  </figure>
+                <figure class="col-md-6 col-lg" data-toggle="modal" data-target="#booking" onclick="modalValue('klippning - kort hår')">
+                    <picture>
+                      <source srcset="images/haircut-4019676_1280x960.jpg" media="(min-width:900px)"/>
+                      <source srcset="images/haircut-4019676_800x600.jpg" media="(min-width:700px)" />
+                      <source srcset="images/haircut-4019676_640x480.jpg" media="(min-width:550px)" />
+                      <img src="images/haircut-4019676_480x360.jpg" class="figure-img img-fluid" alt="klippning av kort hår" />
+                    </picture>
+                    <figcaption class="figure-caption">
+                        <h2>Kort hår</h2>
+                        <p>Vi klipper långt hår till billigare pris - med maskin</p>
+                    </figcaption>
+                </figure>
+                <figure class="col-md-6 col-lg" data-toggle="modal" data-target="#booking" onclick="modalValue('permanenta håret')">
+                    <picture>
+                      <source srcset="images/rollers-486339_1280x960.jpg" media="(min-width:900px)"/>
+                      <source srcset="images/rollers-486339_800x600.jpg" media="(min-width:700px)" />
+                      <source srcset="images/rollers-486339_640x480.jpg" media="(min-width:550px)" />
+                      <img src="images/rollers-486339_480x360.jpg" class="figure-img img-fluid" alt="rullar som används för permanent" />
+                    </picture>
+                    <figcaption class="figure-caption">
+                        <h2>Permanent</h2>
+                        <p>Vår permanent håller längst</p>
+                    </figcaption>
+                </figure>
+                <figure class="col-md-6 col-lg" data-toggle="modal" data-target="#booking" onclick="modalValue('vaxning')">
+                    <picture>
+                      <source srcset="images/waxing-1247337_1280x960.jpg" media="(min-width:900px)"/>
+                      <source srcset="images/waxing-1247337_800x600.jpg" media="(min-width:700px)" />
+                      <source srcset="images/waxing-1247337_640x4800.jpg" media="(min-width:550px)" />
+                      <img src="images/waxing-1247337_480x360.jpg" class="figure-img img-fluid" alt="vax för hårborttagning" />
+                    </picture>
+                    <figcaption class="figure-caption">
+                        <h2>Vaxning</h2>
+                        <p>Vi vaxar öron och andra delar av ansiktet</p>
+                    </figcaption>
+                </figure>
+            </section>
+        </main>
+
+        <footer>
+          &copy; 2021
+        </footer>
+
+</div>
+        <!-- Modal -->
+        <div class="modal fade" id="booking" role="dialog">
+          <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+              <div class="modal-header">
+                <h4 class="modal-title">Hanssons hårsalong - Tidbokning</h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+              </div>
+              <div class="modal-body">
+                <form>
+                  <fieldset class="modal-fieldset">
+                    <legend>Boka tid: </legend>
+                    <label for="fname">Förnamn: </label>
+                    <input type="text" id="fname" name="fname" /><br><br>
+                    <label for="lname">Efternamn: </label>
+                    <input type="text" id="lname" name="lname" /><br><br>
+                    <label for="service">Önskad tjänst: </label>
+                    <input type="text" id="service" name="service" /><br><br>
+                    <label for="datepicker">När: </label>
+                    <span><input type="date" id="datepicker" name="datepicker" />
+                    <select id="timeslots" name="timeslots" >
+                      <option value="" selected disabled hidden>hh</option>
+                      <option value="10">10</option>
+                      <option value="11">11</option>
+                      <option value="12">12</option>
+                      <option value="13">13</option>
+                      <option value="14">14</option>
+                      <option value="15">15</option>
+                      <option value="16">16</option>
+                      <option value="17">17</option>
+                      <option value="18">18</option>
+                    </select></span><br><br>
+                    <input class="btn btn-success" type="submit" value="Boka tid!" />
+                    
+                  </fieldset>
+                </form>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+</body>
+
+</html>

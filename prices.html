@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+
+<html lang="sv-se">
+<head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Hanssons Hårsalong - Prislista</title>
+        <link rel="stylesheet" href="styles/bootstrap.css" />
+        <link rel="stylesheet" href="styles/customstyle.css" />
+        <script src="scripts/bootstrapjquery.js"></script>
+        <script src="scripts/bootstrap.bundle.js"></script>
+</head>
+<body>
+    <div class="wrapper">
+        <header class="sticky-top">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <a class="navbar-brand" href="Index.html">Hanssons hårsalong</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+              
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                  <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                      <a class="nav-link" href="Index.html">Hem</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="Services.html">Tjänster</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link active" href="Prices.html">Priser</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="Contact.html">Kontakt</a>
+                    </li>
+                  </ul>
+                  
+                    <button class="btn btn-outline-success my-2 my-sm-0" data-toggle="modal" data-target="#booking" >Boka tid!</button>
+                </div>
+              </nav>
+        </header>
+
+        <main>
+            <section class="row">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Tjänst</th>
+                            <th>Pris</th>
+                            <th>Tid</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Långt hår</td>
+                            <td>700 kr</td>
+                            <td>45 min</td>
+                        </tr>
+                        <tr>
+                            <td>Kort hår</td>
+                            <td>200 kr</td>
+                            <td>15 min</td>
+                        </tr>
+                        <tr>
+                            <td>Permanent</td>
+                            <td>1200 kr</td>
+                            <td>2 h</td>
+                        </tr>
+                        <tr>
+                            <td>Vaxa öron</td>
+                            <td>200 kr (gratis för stammisar)</td>
+                            <td>10 min</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+        </main>
+
+        <footer>
+            &copy; 2021
+        </footer>
+                <!-- Modal -->
+                <div class="modal fade" id="booking" role="dialog">
+                  <div class="modal-dialog">
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h4 class="modal-title">Hanssons hårsalong - Tidbokning</h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                      </div>
+                      <div class="modal-body">
+                        <form>
+                          <fieldset class="modal-fieldset">
+                            <legend>Boka tid: </legend>
+                            <label for="fname">Förnamn: </label>
+                            <input type="text" id="fname" name="fname" /><br><br>
+                            <label for="lname">Efternamn: </label>
+                            <input type="text" id="lname" name="lname" /><br><br>
+                            <label for="service">Önskad tjänst: </label>
+                            <input type="text" id="service" name="service" /><br><br>
+                            <label for="datepicker">När: </label>
+                            <span><input type="date" id="datepicker" name="datepicker" />
+                            <select id="timeslots" name="timeslots" >
+                              <option value="" selected disabled hidden>hh</option>
+                              <option value="10">10</option>
+                              <option value="11">11</option>
+                              <option value="12">12</option>
+                              <option value="13">13</option>
+                              <option value="14">14</option>
+                              <option value="15">15</option>
+                              <option value="16">16</option>
+                              <option value="17">17</option>
+                              <option value="18">18</option>
+                            </select></span><br><br>
+                            <input class="btn btn-success" type="submit" value="Boka tid!" />
+                            
+                          </fieldset>
+                        </form>
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+    </div>
+</body>
+
+</html>
