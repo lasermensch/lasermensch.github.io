@@ -4,6 +4,8 @@
 <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="author" content="Erik Sundberg" />
+        <meta name="description" content="Hanssons hårsalong har i över 100 år hjälpt till med frisyrer både för vardag och fest." />
         <title>Hanssons Hårsalong - Tjänster</title>
         <link rel="stylesheet" href="styles/bootstrap.css" />
         <link rel="stylesheet" href="styles/customstyle.css" />
@@ -44,7 +46,7 @@
 
         <main>
             <section class="row">
-                <figure class="col-md-6 col-lg" data-toggle="modal" data-target="#booking" onclick="modalValue('klippning - långt hår')">
+                <figure class="col-md-6 col-lg" data-toggle="modal" data-target="#booking" onclick="modalValue('0')">
                   <picture> <!--Det är absolut korrekt att använda picture inom figure. https://stackoverflow.com/questions/12899691/use-of-picture-inside-figure-element-in-html5-->
                     <source srcset="images/hairdresser-4682912_1280x960.jpg" media="(min-width:900px)"/>
                     <source srcset="images/hairdresser-4682912_800x600.jpg" media="(min-width:700px)" />
@@ -56,7 +58,7 @@
                         <p>Vi klipper långt hår till dyrare pris</p>
                     </figcaption>
                   </figure>
-                <figure class="col-md-6 col-lg" data-toggle="modal" data-target="#booking" onclick="modalValue('klippning - kort hår')">
+                <figure class="col-md-6 col-lg" data-toggle="modal" data-target="#booking" onclick="modalValue('1')">
                     <picture>
                       <source srcset="images/haircut-4019676_1280x960.jpg" media="(min-width:900px)"/>
                       <source srcset="images/haircut-4019676_800x600.jpg" media="(min-width:700px)" />
@@ -68,7 +70,7 @@
                         <p>Vi klipper långt hår till billigare pris - med maskin</p>
                     </figcaption>
                 </figure>
-                <figure class="col-md-6 col-lg" data-toggle="modal" data-target="#booking" onclick="modalValue('permanenta håret')">
+                <figure class="col-md-6 col-lg" data-toggle="modal" data-target="#booking" onclick="modalValue('2')">
                     <picture>
                       <source srcset="images/rollers-486339_1280x960.jpg" media="(min-width:900px)"/>
                       <source srcset="images/rollers-486339_800x600.jpg" media="(min-width:700px)" />
@@ -80,7 +82,7 @@
                         <p>Vår permanent håller längst</p>
                     </figcaption>
                 </figure>
-                <figure class="col-md-6 col-lg" data-toggle="modal" data-target="#booking" onclick="modalValue('vaxning')">
+                <figure class="col-md-6 col-lg" data-toggle="modal" data-target="#booking" onclick="modalValue('3')">
                     <picture>
                       <source srcset="images/waxing-1247337_1280x960.jpg" media="(min-width:900px)"/>
                       <source srcset="images/waxing-1247337_800x600.jpg" media="(min-width:700px)" />
@@ -118,7 +120,13 @@
                     <label for="lname">Efternamn: </label>
                     <input type="text" id="lname" name="lname" /><br><br>
                     <label for="service">Önskad tjänst: </label>
-                    <input type="text" id="service" name="service" /><br><br>
+                    <select id="service" name="service">
+                      <option value="" selected disabled hidden>--välj--</option>
+                      <option value="0">Klippning - långt hår</option>
+                      <option value="1">Klippning - kort hår</option>
+                      <option value="2">Permanent</option>
+                      <option value="3">Vaxning</option>
+                    </select><br><br>
                     <label for="datepicker">När: </label>
                     <span><input type="date" id="datepicker" name="datepicker" />
                     <select id="timeslots" name="timeslots" >

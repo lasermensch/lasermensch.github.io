@@ -1,4 +1,4 @@
-function modalValue (s){
-    var text = document.getElementById("service");
-    text.value = s;
+function modalValue (n){
+    var selectbox = document.getElementById("service");
+    selectbox.value = n;
 }

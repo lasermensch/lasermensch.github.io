@@ -1,0 +1,6 @@
+#Allow all crawlers, but do not allow them access to certain folders.
+User-agent: *
+Disallow: /images/
+Disallow: /scripts/
+Disallow: /styles/
+Allow: /
