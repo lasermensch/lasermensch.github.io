@@ -19,8 +19,4 @@ async function loadSection (element) {
     
 }
 
-// <li id="linkToHero">Home</li>
-// <li id="linkToSkills">Skills</li>
-// <li id="linkToProjects">Projects</li>
-// <li id="linkToAbout">About</li>
-// <li id="linkToContact">Contact</li>
+loadSection('hero');
