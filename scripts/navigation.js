@@ -1,4 +1,4 @@
-window.onload = function () {console.log('tada!');loadSection('hero');}
+
 
 const main = document.querySelector('#main');
 
@@ -11,14 +11,10 @@ document.querySelector('#linkToHome').addEventListener('click', function() {load
 
 async function loadSection (element) {
     let content = "";
- 
     await fetch(`../${element}.html`)
         .then(response => response.text()).then(data => content = data);
   
-
-    
     main.innerHTML = content;
-    
     
 }
 
