@@ -2,20 +2,17 @@
 
 const main = document.querySelector('#main');
 
-document.querySelector('#linkToHero').addEventListener('click', function () {loadSection('hero')});
-document.querySelector('#linkToSkills').addEventListener('click', function() {loadSection('service')});
-document.querySelector('#linkToProjects').addEventListener('click', function() {loadSection('projects')});
-document.querySelector('#linkToAbout').addEventListener('click', function() {loadSection('about')});
-document.querySelector('#linkToContact').addEventListener('click', function() {loadSection('contact')});
-document.querySelector('#linkToHome').addEventListener('click', function() {loadSection('hero')});
-
 async function loadSection (element) {
     let content = "";
     await fetch(`../${element}.html`)
         .then(response => response.text()).then(data => content = data);
   
     main.innerHTML = content;
-    
+    document.querySelectorAll('.linkToHero').forEach((el)=>{el.addEventListener('click', function () {loadSection('hero')})});
+    document.querySelectorAll('.linkToSkills').forEach((el)=>{el.addEventListener('click', function() {loadSection('service')})});
+    document.querySelectorAll('.linkToProjects').forEach((el)=>{el.addEventListener('click', function() {loadSection('projects')})});
+    document.querySelectorAll('.linkToAbout').forEach((el)=>{el.addEventListener('click', function() {loadSection('about')})});
+    document.querySelectorAll('.linkToContact').forEach((el)=>{el.addEventListener('click', function() {loadSection('contact')})});
 }
 
 
